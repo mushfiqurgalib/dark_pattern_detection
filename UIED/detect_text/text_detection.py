@@ -122,7 +122,7 @@ def text_detection(input_file='../data/input/30800.jpg', output_file='../data/ou
     ocr_root = pjoin(output_file, 'ocr')
     img = cv2.imread(input_file)
 
-    ocr_result = ocr.ocr_detection_google(input_file)
+    ocr_result = ocr.ocr_detection_tesseract(input_file)
     print(ocr_result)
     texts = text_cvt_orc_format(ocr_result)
     print(texts)
